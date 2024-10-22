@@ -10,8 +10,8 @@ import {
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root/>
-  }
+    element: '',
+  },
 ], { basename:"/zahinabdullah/" })
 
 createRoot(document.getElementById('root')).render(
