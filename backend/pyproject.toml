@@ -1,0 +1,28 @@
+[project]
+name = "portfolio_backend"
+version = "0.1.0"
+description = "Backend for the project portfolio"
+authors = [
+    {name = "ZahinRakin", email = "zahinabdullahrakin@gmail.com"}
+]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.9, <4.0"
+dependencies = [
+    "fastapi (>=0.115.12,<0.116.0)",
+    "uvicorn[standard] (>=0.34.2,<0.35.0)",  # Keep uvicorn in dependencies for production use
+    "python-dotenv (>=1.1.0,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    {include = "main", from = "src"},
+    {include = "test", from = "src"}
+]
+
+[tool.poetry.group.dev.dependencies]
+uvicorn = ">=0.34.2,<0.35.0"  # Move uvicorn here if it's only used for development
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
